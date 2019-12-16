@@ -44,7 +44,10 @@ metadata:
   labels:
     name: carts-db
   namespace: sock-shop
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
+  type: LoadBalancer
   ports:
     # the port that this service should serve on
   - port: 27017
@@ -102,7 +105,10 @@ metadata:
   labels:
     name: carts
   namespace: sock-shop
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
+  type: LoadBalancer
   ports:
     # the port that this service should serve on
   - port: 80
@@ -145,7 +151,10 @@ metadata:
   labels:
     name: catalogue-db
   namespace: sock-shop
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
+  type: LoadBalancer
   ports:
     # the port that this service should serve on
   - port: 3306
@@ -191,7 +200,10 @@ metadata:
   labels:
     name: catalogue
   namespace: sock-shop
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
+  type: LoadBalancer
   ports:
     # the port that this service should serve on
   - port: 80
@@ -237,6 +249,8 @@ metadata:
   labels:
     name: front-end
   namespace: sock-shop
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
   type: NodePort
   ports:
@@ -292,7 +306,10 @@ metadata:
   labels:
     name: orders-db
   namespace: sock-shop
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
+  type: LoadBalancer
   ports:
     # the port that this service should serve on
   - port: 27017
@@ -350,7 +367,10 @@ metadata:
   labels:
     name: orders
   namespace: sock-shop
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
+  type: LoadBalancer
   ports:
     # the port that this service should serve on
   - port: 80
@@ -396,7 +416,10 @@ metadata:
   labels:
     name: payment
   namespace: sock-shop
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
+  type: LoadBalancer
   ports:
     # the port that this service should serve on
   - port: 80
@@ -435,7 +458,10 @@ metadata:
   annotations:
     prometheus.io/path: "/prometheus"
   namespace: sock-shop
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
+  type: LoadBalancer
   ports:
     # the port that this service should serve on
   - port: 80
@@ -450,6 +476,8 @@ metadata:
   labels:
     name: rabbitmq
   namespace: sock-shop
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
   replicas: 1
   template:
@@ -482,7 +510,10 @@ metadata:
   labels:
     name: rabbitmq
   namespace: sock-shop
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
+  type: LoadBalancer
   ports:
     # the port that this service should serve on
   - port: 5672
@@ -540,7 +571,10 @@ metadata:
   labels:
     name: shipping
   namespace: sock-shop
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
+  type: LoadBalancer
   ports:
     # the port that this service should serve on
   - port: 80
@@ -555,6 +589,8 @@ metadata:
   labels:
     name: user-db
   namespace: sock-shop
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
   replicas: 1
   template:
@@ -594,7 +630,10 @@ metadata:
   labels:
     name: user-db
   namespace: sock-shop
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
+  type: LoadBalancer
   ports:
     # the port that this service should serve on
   - port: 27017
@@ -643,7 +682,10 @@ metadata:
   labels:
     name: user
   namespace: sock-shop
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
+  type: LoadBalancer
   ports:
     # the port that this service should serve on
   - port: 80

@@ -249,14 +249,14 @@ metadata:
   labels:
     name: front-end
   namespace: sock-shop
-  annotations:
-    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+  #  annotations:
+  #  service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 8079
-    nodePort: 30001
+    #  nodePort: 30001
   selector:
     name: front-end
 ---
